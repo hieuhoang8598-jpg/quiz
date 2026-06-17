@@ -76,7 +76,7 @@
 </div>
 
 <script>
-(function(){ emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); })();
+(function(){ emailjs.init("dz_futVut4fVZkIug"); })();
 
 // ── Question data ──────────────────────────────────────────────
 const questions = [
@@ -213,7 +213,7 @@ function submitQuiz() {
     return `Q${qi+1}: ${q.title}\n→ ${ans}`;
   }).join('\n\n');
 
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+  emailjs.send("service_l2mn9hb", "f0sau5c", {
     to_email: "hieuhoang8598@gmail.com",
     subject: "📋 Survey Result — Bag chosen: " + bagPicked,
     message: summary
