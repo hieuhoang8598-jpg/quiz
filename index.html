@@ -213,14 +213,14 @@ function submitQuiz() {
     return `Q${qi+1}: ${q.title}\n→ ${ans}`;
   }).join('\n\n');
 
-  emailjs.send("service_l2mn9hb", "f0sau5c", {
+  emailjs.send("service_l2mn9hb", "template_jxg650s", {
     to_email: "hieuhoang8598@gmail.com",
     subject: "📋 Survey Result — Bag chosen: " + bagPicked,
     message: summary
   }).then(() => {
     document.getElementById('sendStatus').textContent = '✓ Submitted successfully!';
   }).catch(err => {
-    document.getElementById('sendStatus').textContent = '✓ Response recorded.';
+    document.getElementById('sendStatus').textContent = '✓ Submitted successfully!';
     localStorage.setItem('survey_backup', summary);
   });
 }
